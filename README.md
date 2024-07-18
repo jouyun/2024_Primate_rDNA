@@ -19,7 +19,24 @@ This section will provide an overview of the project, including its motivation, 
 
 ## Installation
 
-Instructions on how to set up the environment and install any necessary dependencies to run the code.
+1. **Clone the repository:**
+
+git clone https://github.com/jouyun/2024_Primate_rDNA.git
+
+2. **Create a Conda environment:**
+
+After cloning the repository, navigate to the project directory:
+
+cd 2024_Primate_rDNA
+conda env create -f environment.yml
+
+This will install all necessary dependencies in an isolated environment to avoid conflicts with other projects.
+
+3. **Activate the Conda environment:**
+
+Once the environment is created, activate it using:
+
+conda activate 2024_Primate_Napari
 
 ## Usage
 
