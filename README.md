@@ -21,14 +21,14 @@ This section will provide an overview of the project, including its motivation, 
 
 1. **Clone the repository:**
 
-git clone https://github.com/jouyun/2024_Primate_rDNA.git
+~~~git clone https://github.com/jouyun/2024_Primate_rDNA.git
 
 2. **Create a Conda environment:**
 
 After cloning the repository, navigate to the project directory:
 
-cd 2024_Primate_rDNA
-conda env create -f environment.yml
+~~~cd 2024_Primate_rDNA
+~~~conda env create -f environment.yml
 
 This will install all necessary dependencies in an isolated environment to avoid conflicts with other projects.
 
@@ -36,7 +36,7 @@ This will install all necessary dependencies in an isolated environment to avoid
 
 Once the environment is created, activate it using:
 
-conda activate 2024_Primate_Napari
+~~~conda activate 2024_Primate_Napari
 
 ## Usage
 
