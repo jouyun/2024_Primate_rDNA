@@ -1,18 +1,13 @@
 # Image Processing and Data Analysis for Primate rDNA
 
-This repository contains the code and resources used in the 2024 publication on Primate rDNA. The focus of this work is on the analysis and processing of genetic data from various primate species to understand the evolution and function of ribosomal DNA (rDNA) sequences.
+This repository contains the code and resources used in the 2024 publication on Primate rDNA. The focus of this work is on the analysis and processing of fluorescence microscopy data to ascertain the fraction of total rDNA contained within each specific chromosome.
 
 ## Contents
 
-- [Introduction](#introduction)
 - [Installation](#installation)
 - [HG02080](#hg02080)
 - [Orangutan](#orangutan)
 - [Citation](#citation)
-
-## Introduction
-
-This section will provide an overview of the project, including its motivation, goals, and the significance of the research on primate rDNA.
 
 ## Installation
 
@@ -45,11 +40,14 @@ conda activate 2024_Primate_Napari
 
 ## HG02080
 
-Details about the analysis related to the HG02080 sample will be provided here.
+ConvertRGB.ijm:  Run first in ImageJ on raw .nd2 files in order to convert to RGB for cellpose
+Karyotyper_Acrocentric.ipynb:  Does segmentaton of acrocentric chromosomes using a custom cellpose model.  User can verify segmentation and then use FixManualLabeling.ipynb to make adjustments.  Separates these into karyograms.  These Karyograms are then ordered using Show.ijm in ImageJ (order being 13, 14, 15, 21, 22).  Once ordered continue analysis from "Analysis" section to generate plots.
+Trainer_Acrocentric.ipynb:  Used for retraining cellpose model
+Show.ijm:  Used to order karyograms as an intermediate step to Karyotyper_Acrocentric.ipynb above
 
-## Orangutan
+## Orangutan and Bornean
 
-This section will cover the specifics of the data analysis concerning the Orangutan samples.
+Individual steps are broken down.  First run ConvertRGB.ijm in ImageJ to convert to RGB.  A-MakeAcroFromRGB.ipynb to segment acrocentrics, B-FixManualLabeling.ipynb to add any acrocentrics that got missed, C-MakerDNAFromRGB.ipynb to segment the rDNA regions, and E-ProcessResults.ipynb to combine the two and plot results.
 
 ## Citation
 
