@@ -20,9 +20,11 @@ This section will provide an overview of the project, including its motivation, 
 ## Installation
 
 1. **Clone the repository:**
+
 ```
 git clone https://github.com/jouyun/2024_Primate_rDNA.git
 ```
+
 2. **Create a Conda environment:**
 
 After cloning the repository, navigate to the project directory:
